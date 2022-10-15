@@ -15,7 +15,6 @@ public class MoveThenStop : MonoBehaviour
     void Start()
     {
         moveDirection = new Vector3(.01f, 0, 0);
-        destination = transform.position + new Vector3(10, 0, 0);
     }
 
     // Update is called once per frame
@@ -25,6 +24,8 @@ public class MoveThenStop : MonoBehaviour
         
         if (Vector3.Distance(transform.position, destination) < .1f)
         {
+            destination = transform.position + new Vector3(10, 0, 0);
+
         }
 
         return;

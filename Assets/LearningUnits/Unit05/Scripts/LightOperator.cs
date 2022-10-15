@@ -22,10 +22,15 @@ public class LightOperator : MonoBehaviour
     void Update()
     {
         // if...
-        pointLight.enabled = true;
-
+        if (isRedCubeDetected)
+        {
+            pointLight.enabled = true;
+        }
         // else
-        pointLight.enabled = false;
+        else
+        {
+            pointLight.enabled = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
